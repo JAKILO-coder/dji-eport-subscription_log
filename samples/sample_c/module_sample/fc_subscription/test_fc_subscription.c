@@ -443,24 +443,13 @@ T_DjiReturnCode DjiTest_FcSubscriptionRunSample(void)
 	time_t rawtime;
     struct tm *timeinfo;
     char filename[80];
-
-    time(&rawtime);
-    timeinfo = localtime(&rawtime);
-    strftime(filename, sizeof(filename), "/home/jakilo/Documents/JAKILO_flightlog_%Y-%m-%d_%H-%M-%S.txt", timeinfo);
-
     FILE *fptr;
-    fptr = fopen(filename, "a");
-    if(fptr == NULL)
-    {
-        USER_LOG_ERROR("open file failed");
-    }
-    else
-    {
-        USER_LOG_INFO("open file success");
-    }
-    fclose(fptr);
 
-    for (int i = 0; i < 10; ++i) {
+    // for (int i = 0; i < 99999999999999; ++i) {
+    while (1) {
+        time(&rawtime);
+        timeinfo = localtime(&rawtime);
+        strftime(filename, sizeof(filename), "/home/jakilo/Documents/JAKILO_flightlog_%Y-%m-%d_%H-%M.txt", timeinfo);
         fptr = fopen(filename, "a");
         if(fptr == NULL)
         {
