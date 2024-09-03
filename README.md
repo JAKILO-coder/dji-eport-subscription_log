@@ -1,3 +1,9 @@
+# Official Document
+https://developer.dji.com/doc/payload-sdk-tutorial/cn/quick-start/quick-guide/raspberry-pi.html  
+See the code   
+dji-eport-subscription_log\samples\sample_c\module_sample\fc_subscription\test_fc_subscription.c
+
+
 # DJI Payload SDK (PSDK)
 
 ![](https://img.shields.io/badge/version-V3.8.1-purple.svg)
