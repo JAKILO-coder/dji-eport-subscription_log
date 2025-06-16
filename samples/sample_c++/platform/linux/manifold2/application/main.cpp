@@ -60,6 +60,7 @@ int main(int argc, char **argv)
     T_DjiTestApplyHighPowerHandler applyHighPowerHandler;
 
 start:
+    DjiTest_FcSubscriptionRunSample();
     std::cout
         << "\n"
         << "| Available commands:                                                                              |\n"
